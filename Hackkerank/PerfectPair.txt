@@ -1,0 +1,19 @@
+A pair of integers (x, y) is perfect if both of the following conditions are met:
+• min([x-y], [x+y) ≤ min([x], [y])
+• max(x-y], [x+y)= max(|x|, |y|)
+Given an array arr of length n, find the number of perfect pairs (arr[i], arr[j]) where 0 <i<j<n.
+Here min(a, b) is the minimum of a and b, max(a, b) is the maximum of a and b, and /x/ is the absolute value of x.
+Example:
+arr = [2,5, -3]
+In this example, n = 3. The possible pairs are (2,5), (2, -3) and (5, -3).
+(2,5) is not perfect
+• min(12-5|, |2+5|) = 3, min(|2|, |5|)=2
+• It fails the first test: 3 > 2
+(2,-3) is perfect
+• min(|5|, |-1) = 1, min(|2|, |-3|)=2 • It passes the first test: 1 ≤ 2
+• max([5], -1)=5, max(|2|, |-3]) = 3 • It passes the second test: 5 > 3
+(5, -3) is perfect
+min(18, 2) = 2, min(|5|, |-3)=3 • It passes the first test: 2 <3
+• max(18, 2) = 8, max(|5|, |-3)=5
+о
+It passes the second test: 8 > 5
